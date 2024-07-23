@@ -764,7 +764,7 @@ GameObject:
   - component: {fileID: 206631141}
   - component: {fileID: 206631143}
   - component: {fileID: 206631142}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -976,7 +976,7 @@ GameObject:
   - component: {fileID: 286317486}
   - component: {fileID: 286317487}
   - component: {fileID: 286317485}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Health bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1195,7 +1195,7 @@ GameObject:
   - component: {fileID: 369045624}
   - component: {fileID: 369045626}
   - component: {fileID: 369045625}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Hearth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1568,7 +1568,7 @@ GameObject:
   - component: {fileID: 416654745}
   m_Layer: 3
   m_Name: Surface1 (1)
-  m_TagString: Untagged
+  m_TagString: Surface
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2137,7 +2137,7 @@ GameObject:
   - component: {fileID: 754929966}
   m_Layer: 3
   m_Name: AS1
-  m_TagString: Untagged
+  m_TagString: Surface
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2504,7 +2504,7 @@ GameObject:
   - component: {fileID: 1000656680}
   - component: {fileID: 1000656679}
   - component: {fileID: 1000656678}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3411,7 +3411,7 @@ GameObject:
   - component: {fileID: 1692609022}
   m_Layer: 3
   m_Name: Surface1
-  m_TagString: Untagged
+  m_TagString: Surface
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3663,7 +3663,7 @@ GameObject:
   - component: {fileID: 1809775596}
   - component: {fileID: 1809775595}
   - component: {fileID: 1809775598}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: CanvasAbovePlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}

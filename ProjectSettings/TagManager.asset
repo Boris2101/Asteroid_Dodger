@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Asteroid
   - Enemy1
+  - Surface
+  - EnemyBullet
+  - PlasmaProjectile
   layers:
   - Default
   - TransparentFX

@@ -30,7 +30,7 @@ public class PlasmaProjectileScript : MonoBehaviour
             Destroy(gameObject);
             Instantiate(plasmaExplose, transform.position, Quaternion.identity);
         }
-        
+
         transform.Translate(Vector2.right * _speed * Time.deltaTime);
 
         Destroy(gameObject, _lifeTime);

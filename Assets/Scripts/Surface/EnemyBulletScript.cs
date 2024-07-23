@@ -37,5 +37,10 @@ public class EnemyBulletScript : MonoBehaviour
             Instantiate(RocketExplosionParticles, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
+        else if (other.CompareTag("Surface") || other.CompareTag("PlasmaProjectile"))
+        {
+            Instantiate(RocketExplosionParticles, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+        }
     }
 }
