@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SurfacePlayerController : MonoBehaviour
 {
+    #region Variables
     Rigidbody2D _rb;
     public HealthBar healthBar;
     public int maxHealth = 5;
@@ -11,6 +12,7 @@ public class SurfacePlayerController : MonoBehaviour
     public int speed = 5;
     [SerializeField] bool facingRight = true;
     Vector2 _move;
+    #endregion
 
     private void Awake()
     {
