@@ -7,11 +7,6 @@ public class EnemyShooting : MonoBehaviour
     [SerializeField] GameObject bullet;
     [SerializeField] Transform bulletStartPosition;
     [SerializeField] float timer;
-    void Start()
-    {
-        
-    }
-
     
     void Update()
     {

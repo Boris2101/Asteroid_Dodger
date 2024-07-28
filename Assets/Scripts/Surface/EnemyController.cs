@@ -17,9 +17,9 @@ public class EnemyController : MonoBehaviour
 
     private void Update()
     {
-
+    
         transform.position = Vector2.MoveTowards(transform.position, Player.transform.position, enemySpeed * Time.deltaTime);
-        
+
         Vector3 scale = transform.localScale;
 
         if (Player.transform.position.x > transform.position.x)

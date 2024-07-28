@@ -11,7 +11,7 @@ public class EnemySpawnPoint : MonoBehaviour
     [SerializeField] float speed;
     Vector2 targetPosition;
 
-    [SerializeField] GameObject enemy;
+    [SerializeField] GameObject[] enemies;
     [SerializeField] float timeBtwEnemySpawn = 10f;
     [SerializeField] float currentTimeBtwEnemySpawn;
     private void Awake()
@@ -44,7 +44,8 @@ public class EnemySpawnPoint : MonoBehaviour
 
     IEnumerator EnemySpawn()
     {
-        Instantiate(enemy, transform.position, Quaternion.identity);
+        int numberOfEnemy = Random.Range(0, enemies.Length);
+        Instantiate(enemies[numberOfEnemy], transform.position, Quaternion.identity);
         yield return null;
     }
 }
