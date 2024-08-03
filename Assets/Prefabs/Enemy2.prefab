@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 1018921612842849942}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.965, y: 0.019, z: 0}
+  m_LocalPosition: {x: -0.52, y: 0.019, z: 0}
   m_LocalScale: {x: -0.21469316, y: 0.20023791, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1679378649
   m_SortingLayer: 2
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 92c34b356731d12448c186978fd84491, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -176,7 +176,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1679378649
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 7e9e4992412bdd5458b79f4d9e39346f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -203,6 +203,8 @@ MonoBehaviour:
   enemySpeed: 2
   flip: 1
   _currentHealth: 2
+  _deathParticles: {fileID: 1351045966480434228, guid: 09e5fb79b65970d4990a55913613ac45, type: 3}
+  _ingot: {fileID: 2512515228042591602, guid: 8ce671ba4117fbe4f94a2ea7e399a45a, type: 3}
 --- !u!61 &-4711226297639150443
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -260,7 +262,7 @@ GameObject:
   m_Layer: 0
   m_Name: PlsmStartPos
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1

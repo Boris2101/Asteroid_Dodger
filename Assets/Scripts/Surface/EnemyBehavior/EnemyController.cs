@@ -8,6 +8,8 @@ public class EnemyController : MonoBehaviour
     [SerializeField] float enemySpeed;
     [SerializeField] bool flip = true;
     [SerializeField] int _currentHealth;
+    [SerializeField] GameObject _deathParticles;
+    [SerializeField] GameObject _ingot;
     float distance;
 
     private void Awake()
@@ -37,6 +39,8 @@ public class EnemyController : MonoBehaviour
 
         if (_currentHealth <= 0)
         {
+            Instantiate(_deathParticles, transform.position, Quaternion.identity);
+            Instantiate(_ingot,transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }
