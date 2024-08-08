@@ -10,6 +10,7 @@ TagManager:
   - EnemyBullet
   - PlasmaProjectile
   - Enemy2
+  - ChangeLevelMainSceneButton
   layers:
   - Default
   - TransparentFX

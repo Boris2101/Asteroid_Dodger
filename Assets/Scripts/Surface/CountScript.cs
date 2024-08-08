@@ -7,6 +7,7 @@ public class CountScript : MonoBehaviour
 {
     [SerializeField] Text _scoreText;
     [SerializeField] int _score = 0;
+    
     void Start()
     {
         _scoreText = GetComponent<Text>();
@@ -16,6 +17,6 @@ public class CountScript : MonoBehaviour
     public void OnPickedUp()
     {
         _score++;
-        _scoreText.text = "Количество слитков: " + _score;
+        _scoreText.text = _score.ToString();
     }
 }
