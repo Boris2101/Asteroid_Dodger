@@ -9,6 +9,8 @@ TagManager:
   - Surface
   - EnemyBullet
   - PlasmaProjectile
+  - Enemy2
+  - ChangeLevelMainSceneButton
   layers:
   - Default
   - TransparentFX
@@ -16,7 +18,7 @@ TagManager:
   - Solid
   - Water
   - UI
-  - 
+  - Player
   - 
   - 
   - 

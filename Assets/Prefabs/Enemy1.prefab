@@ -107,7 +107,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1679378649
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 29b2bdc937c02cb41838d5c851d988c9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -134,6 +134,8 @@ MonoBehaviour:
   enemySpeed: 2
   flip: 1
   _currentHealth: 2
+  _deathParticles: {fileID: 3196075331655586392, guid: cea95d1588be0024680724290c48f05b, type: 3}
+  _ingot: {fileID: 2512515228042591602, guid: 8ce671ba4117fbe4f94a2ea7e399a45a, type: 3}
 --- !u!114 &-4085917227832516945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,7 +183,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.013348579, y: 0.03114587}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -192,5 +194,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.560627, y: 1.7386032}
   m_EdgeRadius: 0

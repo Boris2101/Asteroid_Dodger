@@ -10,12 +10,6 @@ public class PlasmaProjectileScript : MonoBehaviour
     [SerializeField] int _damage;
     public LayerMask whatIsSolid;
     public GameObject plasmaExplose;
-    void Start()
-    {
-        
-
-    }
-
     
     void Update()
     {
@@ -23,7 +17,7 @@ public class PlasmaProjectileScript : MonoBehaviour
 
         if (hitInfo.collider != null)
         {
-            if (hitInfo.collider.CompareTag("Enemy1"))
+            if (hitInfo.collider.CompareTag("Enemy1") || hitInfo.collider.CompareTag("Enemy2"))
             {
                 hitInfo.collider.GetComponent<EnemyController>().TakeDamage(_damage);
             }
