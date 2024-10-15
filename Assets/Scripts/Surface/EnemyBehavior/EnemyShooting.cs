@@ -7,7 +7,13 @@ public class EnemyShooting : MonoBehaviour
     [SerializeField] GameObject bullet;
     [SerializeField] Transform bulletStartPosition;
     [SerializeField] float timer;
-    
+    public AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
+    }
+
     void Update()
     {
         timer += Time.deltaTime;
@@ -21,6 +27,7 @@ public class EnemyShooting : MonoBehaviour
 
     void Shoot()
     {
+        audioManager.PlaySFX(audioManager.enemyPlasmaShot);
         Instantiate(bullet, bulletStartPosition.position, Quaternion.identity);
     }
 }

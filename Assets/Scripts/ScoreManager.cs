@@ -5,11 +5,15 @@ using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
-    [SerializeField] int score;
+    [SerializeField] int score = 0;
     [SerializeField] Text scoreDisplay;
     [SerializeField] int scoreForDescent;
     [SerializeField] Animator buttonAnimator;
 
+    private void Awake()
+    {
+        score = PlayerPrefs.GetInt("SavedMainSceneScore");
+    }
     private void Update()
     {
         scoreDisplay.text = score.ToString();
@@ -20,6 +24,8 @@ public class ScoreManager : MonoBehaviour
         if (other.CompareTag("Asteroid"))
         {
             score++;
+            PlayerPrefs.SetInt("SavedMainSceneScore", score);
+            PlayerPrefs.Save();
         }
     }
 
