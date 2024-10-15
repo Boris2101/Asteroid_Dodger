@@ -9,6 +9,13 @@ public class PlayerGun : MonoBehaviour
     [SerializeField] float _startTimeBtwShots;
     public GameObject projectile;
     public Transform firePoint;
+    public AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
+    }
+
     void Update()
     {
         Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
@@ -21,6 +28,8 @@ public class PlayerGun : MonoBehaviour
             {
                 Instantiate(projectile, firePoint.position, transform.rotation);
                 _timeBtwShots = _startTimeBtwShots;
+                audioManager.PlaySFX(audioManager.playerPlasmaShot);
+
             }
         }
         else
