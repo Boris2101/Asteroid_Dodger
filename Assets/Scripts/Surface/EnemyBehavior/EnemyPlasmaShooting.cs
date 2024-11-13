@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyShooting : MonoBehaviour
+public class EnemyPlasmaShooting : MonoBehaviour
 {
-    [SerializeField] GameObject bullet;
-    [SerializeField] Transform bulletStartPosition;
+    [SerializeField] GameObject plasmaProjectile;
+    [SerializeField] Transform plasmaProjectileStartPosition;
     [SerializeField] float timer;
     public AudioManager audioManager;
 
@@ -18,7 +18,7 @@ public class EnemyShooting : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if (timer >= 2)
+        if (timer >= 3)
         {
             timer = 0;
             Shoot();
@@ -27,7 +27,7 @@ public class EnemyShooting : MonoBehaviour
 
     void Shoot()
     {
-        audioManager.PlaySFX(audioManager.enemyRocketLaunch);
-        Instantiate(bullet, bulletStartPosition.position, Quaternion.identity);
+        audioManager.PlaySFX(audioManager.enemyPlasmaShot);
+        Instantiate(plasmaProjectile, plasmaProjectileStartPosition.position, Quaternion.identity);
     }
 }

@@ -6,7 +6,7 @@ public class EnemyBulletScript : MonoBehaviour
 {
     public GameObject Player;
     public GameObject RocketExplosionParticles;
-    Rigidbody2D _rb;
+    private Rigidbody2D _rb;
     [SerializeField] float bulletSpeed;
     [SerializeField] float lifeTime;
     [SerializeField] int bulletDamage;

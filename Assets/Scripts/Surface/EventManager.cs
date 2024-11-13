@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EventMagager : MonoBehaviour
+public class EventManager : MonoBehaviour
 {
     
     public static event Action PickedUp;

@@ -24,7 +24,7 @@ public class IngotScript : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            EventMagager.OnPickedUp();
+            EventManager.OnPickedUp();
             Destroy(gameObject);
         }
     }

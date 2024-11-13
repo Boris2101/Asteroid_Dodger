@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4826605510910651025}
   - component: {fileID: 6163581090910130073}
-  - component: {fileID: 2124737375889845522}
+  - component: {fileID: 5001245931160655161}
   m_Layer: 0
   m_Name: EnPlsGun2
   m_TagString: Untagged
@@ -86,7 +86,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2124737375889845522
+--- !u!114 &5001245931160655161
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,12 +95,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1018921612842849942}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a50e782d615f5f943923391e9a05c7af, type: 3}
+  m_Script: {fileID: 11500000, guid: 2f7c64b592713a34aab5690efab8612b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 7672208182840786497, guid: 58ed1f462cebd814e8a9b5addaf6db79, type: 3}
-  bulletStartPosition: {fileID: 8713364448023005419}
+  plasmaProjectile: {fileID: 7672208182840786497, guid: 58ed1f462cebd814e8a9b5addaf6db79, type: 3}
+  plasmaProjectileStartPosition: {fileID: 8713364448023005419}
   timer: 0
+  audioManager: {fileID: 0}
 --- !u!1 &5374157884760978266
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ TagManager:
   - PlasmaProjectile
   - Enemy2
   - ChangeLevelMainSceneButton
+  - AudioManager
   layers:
   - Default
   - TransparentFX
