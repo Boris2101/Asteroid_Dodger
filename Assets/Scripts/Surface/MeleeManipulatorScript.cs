@@ -13,13 +13,8 @@ public class MeleeManipulatorScript : MonoBehaviour
     [SerializeField] int _meleeDamage;
     public Animator animator;
     #endregion
-
-    void Start()
-    {
-        
-    }
-
     
+
     void Update()
     {
         if (_timeBtwMelleAttack <= 0)

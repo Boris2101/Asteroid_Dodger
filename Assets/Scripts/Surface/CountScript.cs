@@ -11,7 +11,7 @@ public class CountScript : MonoBehaviour
     void Start()
     {
         _scoreText = GetComponent<Text>();
-        EventMagager.PickedUp += OnPickedUp;
+        EventManager.PickedUp += OnPickedUp;
     }
 
     public void OnPickedUp()

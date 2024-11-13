@@ -16,6 +16,7 @@ public class BackExaust : MonoBehaviour
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
         {
             nozzleEffect.Play();
+
         }
         else
         {
