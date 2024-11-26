@@ -16,8 +16,6 @@ public class AudioManager : MonoBehaviour
     public AudioClip enemyRocketLaunch;
     public AudioClip nozzleSound;
 
-    public SurfacePlayerController surfacePlayerController;
-
     private void Start()
     {
         musicSource.clip = backgroudMusic;
@@ -31,18 +29,17 @@ public class AudioManager : MonoBehaviour
 
     public void PlayNozzleSound()
     {
-        if (surfacePlayerController._move == Vector2.zero)
-        {
-               NozzleSoundSource.Stop();
-        }
-        else
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
         {
             if (NozzleSoundSource.isPlaying == false)
             {
                 NozzleSoundSource.Play();
-
             }
         }
+        else
+        {
+            NozzleSoundSource.Stop();
+        }
     }
-   
+
 }
