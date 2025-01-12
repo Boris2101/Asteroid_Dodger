@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SurfacePlayerController : MonoBehaviour
 {
-    #region Variables
+    #region Fields
     Rigidbody2D _rb;
     public HealthBar healthBar;
+    public CountScript countScript;
+    public AudioManager audioManager;
     public int maxHealth = 5;
     public int currentHealth;
     public int speed = 5;
@@ -19,7 +22,7 @@ public class SurfacePlayerController : MonoBehaviour
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
         _rb = GetComponent<Rigidbody2D>();
-
+        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
     }
 
     public void TakeDamage(int damage)
@@ -28,9 +31,19 @@ public class SurfacePlayerController : MonoBehaviour
         healthBar.SetHealth(currentHealth);
     }
 
+    public void AddHealth()
+    {
+        
+    }
+
     private void Update()
     {
         _move = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        audioManager.PlayNozzleSound();
+        if (currentHealth <= 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 
     private void FixedUpdate()
@@ -52,4 +65,6 @@ public class SurfacePlayerController : MonoBehaviour
         facingRight = !facingRight;
         transform.Rotate(0f, 180f, 0f);
     }
+
+    
 }
