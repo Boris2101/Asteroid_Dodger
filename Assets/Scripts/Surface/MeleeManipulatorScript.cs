@@ -25,7 +25,10 @@ public class MeleeManipulatorScript : MonoBehaviour
                 Collider2D[] enemies = Physics2D.OverlapCircleAll(meleeAttackPos.position, _meleeAttackRadious, enemy);
                 for (int i = 0; i < enemies.Length; i++)
                 {
-                    enemies[i].GetComponent<EnemyController>().TakeDamage(_meleeDamage);
+                    if (enemies[i].CompareTag("Enemy1") || enemies[i].CompareTag("Enemy2"))
+                    {
+                        enemies[i].GetComponent<EnemyController>().TakeDamage(_meleeDamage);
+                    }
                 }
             }
             _timeBtwMelleAttack = _startTimeBtwMeleeAttack;

@@ -21,6 +21,7 @@ public class PlasmaProjectileScript : MonoBehaviour
             {
                 hitInfo.collider.GetComponent<EnemyController>().TakeDamage(_damage);
             }
+            
             Destroy(gameObject);
             Instantiate(plasmaExplose, transform.position, Quaternion.identity);
         }

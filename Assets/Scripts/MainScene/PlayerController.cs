@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     Vector2 targetPosition;
     public GameObject[] replicasArray;
     public HealthBar healthBar;
+    public AudioManager AudioManager;
     [SerializeField] float speed;
     [SerializeField] float YIncrement;
     [SerializeField] float minY;
@@ -19,8 +20,9 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         currentHealth = maxHealth;
-        healthBar.SetMaxHealth(maxHealth); 
-        
+        healthBar.SetMaxHealth(maxHealth);
+        AudioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
+
     }
 
     void Update()
@@ -42,13 +44,15 @@ public class PlayerController : MonoBehaviour
             
         }
 
+        AudioManager.PlayNozzleSoundMainScene();
+
     }
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
     }
-    public void BadWords()
+    public void BadWords()//TODO: переделать озвучивание реплик - примени AudioManager
     {
         int randomReplica = Random.Range(0, replicasArray.Length);
         Instantiate(replicasArray[randomReplica], transform.position, Quaternion.identity);

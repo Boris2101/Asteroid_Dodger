@@ -5,18 +5,18 @@ using UnityEngine.UI;
 
 public class CountScript : MonoBehaviour
 {
-    [SerializeField] Text _scoreText;
-    [SerializeField] int _score = 0;
-    
+    public static Text ScoreText;
+    [SerializeField] internal int _score = 0;
+
     void Start()
     {
-        _scoreText = GetComponent<Text>();
+        ScoreText = GetComponent<Text>();
         EventManager.PickedUp += OnPickedUp;
     }
 
     public void OnPickedUp()
     {
         _score++;
-        _scoreText.text = _score.ToString();
+        ScoreText.text = _score.ToString();
     }
 }
